@@ -28,7 +28,11 @@ public class IntStack{
     */
     int peekDepth(int depth)      
     {
-	return stack[top-depth];
+	if (depth<=top) return stack[top-depth];
+	else
+	{
+	    return -1;
+	}
     }
  
     public static void main (String[] args){
@@ -43,7 +47,7 @@ public class IntStack{
 	System.out.println(is.peek());
 	
 	//tests for peekDepth:
-	System.out.println(is.peekDepth(6));
+	System.out.println(is.peekDepth(100));
 	
 	int val = is.pop();
 	System.out.println(val);
