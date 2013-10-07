@@ -34,6 +34,16 @@ public class IntStack{
 	    return -1;
 	}
     }
+
+    /**
+       Function to return the size of the stack
+       @author Henry Screen
+    */
+    int stackSize()
+    {
+	return top;
+    }
+
  
     public static void main (String[] args){
 	IntStack is = new IntStack(10);
@@ -48,6 +58,9 @@ public class IntStack{
 	
 	//tests for peekDepth:
 	System.out.println(is.peekDepth(100));
+
+	//test for stackSize
+	System.out.println("The Size is: " + is.stackSize());
 	
 	int val = is.pop();
 	System.out.println(val);
