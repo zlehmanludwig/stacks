@@ -20,13 +20,21 @@ public class IntStack{
 	return stack[--top];
     }
     /**
+       ima build pop all  right bout ur  sgon pop allll o dem thangs
+       @author THEOLLIELLAMA
+     */
+    void  popAll()
+    {
+	popMultiple(top);	
+    }
+    /**
        ima build pop multiple right bout hur is gon pop mo than wun
        @author THEOLLIELLAMA
        @param number of items to pop
      */
     void  popMultiple(int pops)
     {
-	for (int i = pops;i>0; i --) s
+	for (int i = pops;i>0; i --)
 	    {
 		System.out.println( pop());
 	    }
@@ -62,7 +70,7 @@ public class IntStack{
 
  
     public static void main (String[] args){
-	IntStack is = new IntStack(10);
+	IntStack is = new IntStack(15);
         is.push(4);
 	is.push(5);
 	is.push(6);
@@ -70,6 +78,12 @@ public class IntStack{
 	is.push(8);
 	is.push(9);
 	is.push(10);
+	is.push(11);
+	is.push(12);
+	is.push(13);
+	is.push(14);
+	is.push(15);
+	is.push(16);
 	System.out.println(is.peek());
 	
 	//tests for peekDepth:
@@ -82,7 +96,8 @@ public class IntStack{
 	
 	//Test for popMultiple
 	is.popMultiple(3);
-
+	//Test for popAll
+	is.popAll();
 	System.out.println(val);
     }
 }
