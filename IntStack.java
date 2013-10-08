@@ -26,7 +26,7 @@ public class IntStack{
      */
     void  popMultiple(int pops)
     {
-	for (int i = pops;i>0; i --) 
+	for (int i = pops;i>0; i --) s
 	    {
 		System.out.println( pop());
 	    }
