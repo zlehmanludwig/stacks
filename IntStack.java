@@ -36,13 +36,48 @@ public class IntStack{
     {
 	return stack[top-1];
     }
+    
+    /**
+      Function to peek at a specific depth
+      @author Henry Screen
+      @param depth the distance from the top
+    */
+    int peekDepth(int depth)      
+    {
+	if (depth<=top) return stack[top-depth];
+	else
+	{
+	    return -1;
+	}
+    }
 
+    /**
+       Function to return the size of the stack
+       @author Henry Screen
+    */
+    int stackSize()
+    {
+	return top;
+    }
+
+ 
     public static void main (String[] args){
 	IntStack is = new IntStack(10);
         is.push(4);
 	is.push(5);
 	is.push(6);
 	is.push(7);
+	is.push(8);
+	is.push(9);
+	is.push(10);
+	System.out.println(is.peek());
+	
+	//tests for peekDepth:
+	System.out.println(is.peekDepth(100));
+
+	//test for stackSize
+	System.out.println("The Size is: " + is.stackSize());
+	
 	int val = is.pop();
 	
 	//Test for popMultiple
