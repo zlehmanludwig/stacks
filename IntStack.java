@@ -20,8 +20,8 @@ public class IntStack{
 	return stack[--top];
     }
     /**
-       ima build pop all  right bout ur  sgon pop allll o dem thangs
-       @author THEOLLIELLAMA
+       ima build popple right bout ur sgon pop allll o dem thangs
+       @author THEOLLIELLAMA (Oliver Kafka)
      */
     void  popAll()
     {
@@ -29,7 +29,7 @@ public class IntStack{
     }
     /**
        ima build pop multiple right bout hur is gon pop mo than wun
-       @author THEOLLIELLAMA
+       @author THEOLLIELLAMA (Oliver Kafka)
        @param number of items to pop
      */
     void  popMultiple(int pops)
@@ -44,6 +44,17 @@ public class IntStack{
     {
 	return stack[top-1];
     }
+    /**
+       listen up! this gon be peak all right round hur. S'gonna peak all o dem numbers.
+       @author THEOLLIELLAMA (Oliver Kafka)
+     */
+   void peekAll()
+    {
+	for (int i = top;i>0; i --)
+	    {
+		System.out.println(stack[i-1]);
+	    }
+    }  
     
     /**
       Function to peek at a specific depth
@@ -84,10 +95,14 @@ public class IntStack{
 	is.push(14);
 	is.push(15);
 	is.push(16);
+	is.peekAll();
 	System.out.println(is.peek());
 	
 	//tests for peekDepth:
 	System.out.println(is.peekDepth(100));
+	
+	//test for peekAll
+	is.peekAll();
 
 	//test for stackSize
 	System.out.println("The Size is: " + is.stackSize());
