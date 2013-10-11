@@ -15,6 +15,26 @@ public class IntStack{
     {
 	stack[top++]=num;
     }
+     /**
+       Search in the int stack for an input
+       @author HWPW
+       @param number to find
+       @param stack array
+     */
+    void search(int input, int[] stack)
+    {
+	int occurence = 0;
+	//search
+	for (int x = 0; x < stack.length; x++)
+	    {
+		if (stack[x] == input);
+		occurence++;
+	    }
+	
+
+	System.out.println("There are " + occurence + " " + input + "s in this stack");
+    }
+
     int pop()
     {
 	return stack[--top];
@@ -100,7 +120,8 @@ public class IntStack{
 	
 	//tests for peekDepth:
 	System.out.println(is.peekDepth(100));
-	
+	//Test for search
+	is.search(5, is.stack);
 	//test for peekAll
 	is.peekAll();
 
