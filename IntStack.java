@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class IntStack{
     int[] stack;
     int top;
@@ -44,6 +46,20 @@ public class IntStack{
 	return top;
     }
 
+    /**
+       Function to resize the array when it gets to big for the amount of things pushed into it (by default  a factor of 10)
+       @auther Henry Screen
+       @param Takes the IntStack in order to change the size of the stack that is within it 
+     */
+    IntStack resizeStack(IntStack is)
+    {
+	int [] newStackSize = new int[stack.length*10];
+	 for (int i = 0; i < stack.length; i++)
+	            newStackSize[i] = stack[i];
+	stack = newStackSize;
+	return is;
+	
+    }
  
     public static void main (String[] args){
 	IntStack is = new IntStack(10);
@@ -62,6 +78,11 @@ public class IntStack{
 	//test for stackSize
 	System.out.println("The Size is: " + is.stackSize());
 	
+	//test for resizeStack
+	System.out.println("The stack max length is: " +  is.stack.length);
+	is.resizeStack(is);
+	System.out.println("The stack max length is: " +  is.stack.length);
+
 	int val = is.pop();
 	System.out.println(val);
     }
