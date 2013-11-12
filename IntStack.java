@@ -19,7 +19,7 @@ public class IntStack{
     }
      /**
        Search in the int stack for an input
-       @author HWPW
+       @author Henry Woods
        @param number to find
        @param stack array
      */
