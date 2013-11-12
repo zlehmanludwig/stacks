@@ -95,6 +95,11 @@ public class IntStack{
 	return is;
 	
     }
+
+     /**
+     Shuffles the contents of the stack
+     @author Zack LL
+     */
  
     public static void main (String[] args){
 	IntStack is = new IntStack(15);
@@ -123,10 +128,7 @@ public class IntStack{
 	//test for stackSize
 	System.out.println("The Size is: " + is.stackSize());
 	
-	//test for resizeStack
-	System.out.println("The stack max length is: " +  is.stack.length);
-	is.resizeStack(is);
-	System.out.println("The stack max length is: " +  is.stack.length);
+
 
 	int val = is.pop();
 	
@@ -135,5 +137,10 @@ public class IntStack{
 	//Test for popAll
 	is.popAll();
 	System.out.println(val);
+	
+        //test for resizeStack
+	System.out.println("The stack max length is: " +  is.stack.length);
+	is.resizeStack(is);
+	System.out.println("The stack max length is: " +  is.stack.length);
     }
 }
